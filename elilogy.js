@@ -6,9 +6,8 @@ import Home from './ecilogy/screens/Home'
 function Elilogy() {
     return (
         <View style={{ flex: 1 }}>
-            {/* <Text>alok</Text> */}
-            {/* <SearchScreen /> */}
-            <Home />
+            <SearchScreen />
+            {/* <Home /> */}
         </View>
     )
 }

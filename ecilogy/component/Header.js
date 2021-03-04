@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
-// import { AntDesign, Inoicons } from '@expo/vector-icons'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 function Header() {
     const mycolor = "#212121"
@@ -17,14 +17,12 @@ function Header() {
                 flexDirection: "row",
                 margin: 5
             }}>
-                <Text style={{ color: "red" }}>1ss</Text>
-                {/* <AntDesign style={{
-                    marginLeft: 20
-                }} name="youtube" size={28} color="red" /> */}
+                <Icon name="youtube-play" size={30} color="red" />
+
                 <Text style={{
-                    fontSize: 22,
-                    marginLeft: 5,
-                    fontWeight: "bold",
+                    fontSize: 20,
+                    marginLeft: 8,
+                    fontWeight: "700",
                     color: mycolor
                 }}>YouTube</Text>
             </View>
@@ -33,14 +31,13 @@ function Header() {
                 flexDirection: "row",
                 justifyContent: "space-around",
                 width: 150,
-                margin: 5
+                margin: 5,
+                marginTop: 12
             }}>
-                <Text>1</Text>
-                <Text>1</Text>
-                <Text>1</Text>
-                {/* <Inoicons name="md-videocam" size={32} color={mycolor} />
-                <Inoicons name="md-videocam" size={32} color={mycolor} />
-                <Inoicons name="md-videocam" size={32} color={mycolor} /> */}
+                <Icon name="video-camera" size={20} color="black" />
+                <Icon name="search" size={20} color="black" />
+                <Icon name="user-circle" size={20} color="black" />
+
             </View>
         </View>
     );

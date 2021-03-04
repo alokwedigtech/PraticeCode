@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, TextInput, Image, TouchableOpacity, Alert } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 function Card() {
     return (
@@ -16,13 +17,15 @@ function Card() {
             />
             <View style={{
                 flexDirection: 'row',
-                margin: 5
+                margin: 10
             }}>
-                <Text> icon</Text>
-
+                <Icon style={{
+                    marginTop: 10
+                }} name="user-circle" size={35} color="black" />
                 <View style={{
                     marginLeft: 10,
-                    width: "80%"
+                    width: "80%",
+                    marginTop: 0
                 }}>
                     <Text style={{
                         fontSize: 20,
@@ -30,7 +33,7 @@ function Card() {
                     }}
                         ellipsizeMode="tail"
                         numberOfLines={2}
-                    > this is amazing this is amazingthis is amazing this is amazing </Text>
+                    > this is amazing this is amazing this is amazing this is amazing </Text>
                     <Text> this is amazing</Text>
                 </View>
 

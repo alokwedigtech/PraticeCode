@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import { StyleSheet, Button, Image, Text, View, Alert, TextInput, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign'
+import Feather from 'react-native-vector-icons/Feather'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import FontAwesome from 'react-native-vector-icons/FontAwesome5'
+
+
 
 const Profile = () => {
     const [email, setEmail] = useState('')
@@ -17,19 +23,21 @@ const Profile = () => {
         <View style={styles.container}>
             <View style={styles.info}>
                 <TouchableOpacity>
-                    <Text style={styles.create}> Icon 1  </Text>
+                    <Feather style={styles.profileicons} name="phone-call" size={35} color="#808080" />
                 </TouchableOpacity>
                 <Image
                     source={{
-                        uri: 'https://thumbs.dreamstime.com/z/woman-doctor-face-mask-white-background-woman-doctor-face-mask-white-background-beautiful-female-doctor-arms-127025399.jpg',
+                        uri: 'https://yt3.ggpht.com/ytc/AAUvwngsMYKVJenoA3m07HTBPjzMjDsuDMgzFi6L1g0Z=s900-c-k-c0x00ffffff-no-rj',
                     }}
-                    style={{ width: 50, height: 50 }}
+                    style={styles.profileimage}
                     resizeMode="stretch"
                 />
                 <TouchableOpacity>
-                    <Text style={styles.newone}>Icon 2 </Text>
+                    <Icon style={styles.profileicons} name="message1" size={35} color="#808080" />
                 </TouchableOpacity>
             </View>
+
+
             <View style={styles.profilename}>
                 <Text style={styles.name}>Alexander Wolfe</Text>
                 <Text style={styles.typedr}>Cardiologist</Text>
@@ -41,16 +49,48 @@ const Profile = () => {
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.options}>
+                <Icon name="user" size={20} color="#808080" />
                 <Text style={styles.optionText}>Persoanl Information</Text>
+                <MaterialIcons name="arrow-forward-ios" size={20} color="#808080" />
+
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.options}>
+                <Icon name="home" size={20} color="#808080" />
                 <Text style={styles.optionText}>Working adress</Text>
+                <MaterialIcons name="arrow-forward-ios" size={20} color="#808080" />
+
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.options}>
+                <Icon name="staro" size={20} color="#808080" />
                 <Text style={styles.optionText}>Reviewer</Text>
+                <MaterialIcons name="arrow-forward-ios" size={20} color="#808080" />
             </TouchableOpacity>
+
+            <View style={styles.bottomicons}>
+                <TouchableOpacity>
+                    <FontAwesome name="capsules" size={30} color="#6a6a6a" />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <FontAwesome name="user-alt" size={30} color="#6a6a6a" />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <FontAwesome name="network-wired" size={30} color="#6a6a6a" />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <Icon name="bars" size={30} color="#6a6a6a" />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <Icon name="user" size={30} color="#6a6a6a" />
+                </TouchableOpacity>
+            </View>
+
+
         </View>
     );
 }
@@ -63,12 +103,23 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    profileicons: {
+        marginTop: 70,
+        margin: 30
+    },
+    profileimage: {
+        height: 170,
+        width: 160,
+        borderRadius: 300,
+    },
+
     info: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        // marginTop: 0
     },
     loginBtn: {
         width: "80%",
-        backgroundColor: "#399cff",
+        backgroundColor: "#799af3",
         borderRadius: 25,
         height: 50,
         alignItems: "center",
@@ -78,13 +129,35 @@ const styles = StyleSheet.create({
     loginText: {
         color: "white"
     },
+    bottomicons: {
+        width: "100%",
+        flexDirection: 'row',
+        // height: 50,
+        position: 'absolute',
+        bottom: 0,
+        justifyContent: "space-around",
+        flexDirection: 'row',
+        shadowColor: "black",
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.51,
+        shadowRadius: 13.16,
+
+        elevation: 20,
+
+        elevation: 4,
+        marginTop: 50
+    },
     options: {
         width: "80%",
         borderRadius: 8,
         height: 50,
         alignItems: "center",
-        justifyContent: "center",
-        marginBottom: 10,
+        justifyContent: "space-around",
+        margin: 7,
+        flexDirection: 'row',
         shadowOffset: {
             width: 0,
             height: 2,
@@ -98,14 +171,14 @@ const styles = StyleSheet.create({
         color: "#000"
     },
     profilename: {
+        margin: 20,
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignContent: 'center',
-        marginBottom: 20
+        alignItems: 'center'
     },
     name: {
-        fontSize: 15,
-        fontWeight: 'bold'
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: "#222222"
     },
     typedr: {
         color: '#b5b5b5'
